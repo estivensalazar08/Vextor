@@ -11,8 +11,8 @@ const CONFIG = {
   eslogan: "Motor Garage",
   ciudad: "Girardota, Antioquia",
   direccion: "Cra. 15 # 10-25, Girardota, Antioquia",   // ⚠️ CAMBIAR
-  whatsapp: "573000000000",                              // ⚠️ CAMBIAR (formato: 57 + número, sin espacios ni +)
-  telefonoVisible: "+57 300 000 00 00",                  // ⚠️ CAMBIAR
+  whatsapp: "573148216601",                              // formato: 57 + número, sin espacios ni +
+  telefonoVisible: "+57 314 821 6601",
   correo: "hola@vextor.com.co",                          // ⚠️ CAMBIAR
   instagram: "vextor.taller",                            // ⚠️ CAMBIAR
   mapa: "https://maps.google.com/?q=Girardota,+Antioquia", // ⚠️ CAMBIAR por el enlace exacto del local
