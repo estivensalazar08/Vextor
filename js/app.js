@@ -545,7 +545,7 @@ function csvCitas() {
     .slice()
     .sort((a, b) => (a.fecha + a.hora).localeCompare(b.fecha + b.hora))
     .map((c) => cols.map((k) => `"${String(c[k] ?? "").replace(/"/g, '""')}"`).join(","));
-  return "﻿" + cols.join(",") + "\n" + filas.join("\n");
+  return "\uFEFF" + cols.join(",") + "\n" + filas.join("\n");
 }
 
 async function descargarCsv() {
