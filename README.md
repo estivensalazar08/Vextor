@@ -45,16 +45,12 @@ reemplace `${iconoDe(p.categoria)}` por `<img src="img/${p.id}.jpg" alt="${escap
 
 ## 3. Cómo funciona la agenda
 
-### Los dos enlaces publicados
+### Los dos enlaces internos de Claude
 
-| | Para qué | Enlace |
-|---|---|---|
-| **Vextor Motor Garage** | El sitio que se le pasa a los clientes. Sin panel interno; el turno se solicita y llega por WhatsApp. | https://claude.ai/code/artifact/13edbe25-05d7-44c7-9660-b7cad5d73a2b |
-| **Agenda Vextor** | Uso interno del taller. Misma página, pero las citas se guardan y el panel muestra la agenda en vivo. | https://claude.ai/code/artifact/1f935a1f-1e01-4d31-93f4-44d1706b9ab6 |
-
-> El enlace público nace **privado**. Para que lo abra cualquier persona hay que entrar
-> a esa página y activar el compartir desde su propio menú de *Share*. El enlace interno
-> se deja como está: no se puede compartir públicamente porque usa base de datos.
+Además de este sitio existen dos páginas publicadas como Artifact en Claude: una para
+clientes y otra de uso interno con la agenda guardada y el panel de turnos. Los enlaces
+no van aquí porque este repositorio es público; están en la conversación de Claude y en
+la galería de Artifacts de la cuenta.
 
 La página tiene **dos modos** y cambia sola según dónde esté publicada:
 
