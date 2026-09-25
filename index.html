@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Vextor Motor Garage</title>
-<meta name="description" content="Taller de motocicletas en Girardota, Antioquia. Agenda tu turno en línea, compra repuestos y accesorios con garantía.">
+<title>Vexttor</title>
+<meta name="description" content="Vexttor — taller de motocicletas en Girardota, Antioquia. Calidad y confianza sobre ruedas. Agenda tu turno en línea, repuestos y accesorios con garantía.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Barlow:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira:wght@500;600;700;800&family=Barlow:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
@@ -17,30 +17,30 @@
 <!-- ===================== BARRA ===================== -->
 <header class="barra">
   <div class="envoltura barra__fila">
-    <a class="logo" href="#inicio" aria-label="Vextor Motor Garage, inicio">
-      <svg class="logo__marca" viewBox="0 0 158 98" role="img" aria-hidden="true" focusable="false">
+    <a class="logo" href="#inicio" aria-label="Vexttor, inicio">
+      <svg class="logo__marca" viewBox="0 0 120 102" role="img" aria-hidden="true" focusable="false">
         <defs>
-          <linearGradient id="vx-cromo" x1="0%" y1="0%" x2="72%" y2="100%">
+          <linearGradient id="vx-cromo" x1="0%" y1="0%" x2="40%" y2="100%">
             <stop offset="0%" stop-color="#FFFFFF"/>
-            <stop offset="26%" stop-color="#C6CDD5"/>
-            <stop offset="48%" stop-color="#79818B"/>
-            <stop offset="70%" stop-color="#E7ECF1"/>
-            <stop offset="100%" stop-color="#9AA2AB"/>
+            <stop offset="30%" stop-color="#D3D6DA"/>
+            <stop offset="52%" stop-color="#83868C"/>
+            <stop offset="74%" stop-color="#ECEEF1"/>
+            <stop offset="100%" stop-color="#A2A5AB"/>
           </linearGradient>
-          <linearGradient id="vx-azul" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stop-color="#0A5FB4"/>
-            <stop offset="60%" stop-color="#1287E8"/>
-            <stop offset="100%" stop-color="#4FA9F7"/>
+          <linearGradient id="vx-rojo" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#FF3B3F"/>
+            <stop offset="55%" stop-color="#E11D22"/>
+            <stop offset="100%" stop-color="#A81419"/>
           </linearGradient>
         </defs>
-        <polygon points="100,8 154,8 146,26 92,26" fill="url(#vx-azul)"/>
-        <polygon points="88,34 154,34 146,52 80,52" fill="url(#vx-azul)"/>
-        <polygon points="76,60 154,60 146,78 68,78" fill="url(#vx-azul)"/>
-        <path d="M0 2 L23 2 L51 64 L79 2 L102 2 L60 94 L42 94 Z" fill="url(#vx-cromo)"/>
+        <g fill="url(#vx-rojo)" stroke="url(#vx-cromo)" stroke-width="5" stroke-linejoin="miter">
+          <path d="M4 8 L34 8 L60 76 L60 96 Z"/>
+          <path d="M116 8 L86 8 L60 76 L60 96 Z"/>
+        </g>
       </svg>
       <span class="logo__texto">
-        <span class="logo__nombre">Ve<i>x</i>tor</span>
-        <span class="logo__sub">Motor Garage</span>
+        <span class="logo__nombre">Vexttor</span>
+        <span class="logo__sub">Calidad y confianza sobre ruedas</span>
       </span>
     </a>
 
@@ -54,7 +54,7 @@
     </nav>
 
     <div class="barra__acciones">
-      <a class="btn btn--azul btn--peq" href="#agendar">Agendar turno</a>
+      <a class="btn btn--rojo btn--peq" href="#agendar">Agendar turno</a>
       <button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
         <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
@@ -78,7 +78,7 @@
       <p class="hero__lede">Reserva el turno en línea y la bahía queda apartada para tu moto. Te cotizamos antes de intervenirla y te avisamos por WhatsApp cuando esté lista.</p>
 
       <div class="hero__ctas">
-        <a class="btn btn--azul" href="#agendar">
+        <a class="btn btn--rojo" href="#agendar">
           Agendar mi turno
           <svg class="chev" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
@@ -106,7 +106,7 @@
           <div class="turno__item"><span>Turnos libres hoy</span><span class="mono" id="libresHoy">—</span></div>
           <div class="turno__item"><span>Servicio más pedido</span><span>Mantenimiento preventivo</span></div>
         </div>
-        <a class="btn btn--azul" href="#agendar" style="width:100%">Apartar este turno</a>
+        <a class="btn btn--rojo" href="#agendar" style="width:100%">Apartar este turno</a>
       </div>
     </aside>
   </div>
@@ -205,7 +205,7 @@
             </div>
             <div class="acciones-hoja">
               <div class="der">
-                <button class="btn btn--azul" data-ir="2">Continuar <svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+                <button class="btn btn--rojo" data-ir="2">Continuar <svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
               </div>
             </div>
           </div>
@@ -221,7 +221,7 @@
             <div class="acciones-hoja">
               <button class="btn btn--fantasma" data-ir="1">Atrás</button>
               <div class="der">
-                <button class="btn btn--azul" data-ir="3">Continuar <svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+                <button class="btn btn--rojo" data-ir="3">Continuar <svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
               </div>
             </div>
           </div>
@@ -256,7 +256,7 @@
             <div class="acciones-hoja">
               <button class="btn btn--fantasma" data-ir="2">Atrás</button>
               <div class="der">
-                <button class="btn btn--azul" id="btnConfirmar">Confirmar turno</button>
+                <button class="btn btn--rojo" id="btnConfirmar">Confirmar turno</button>
               </div>
             </div>
           </div>
@@ -272,7 +272,7 @@
               <div class="confirmacion__codigo" id="codigoCita">VX-0000</div>
               <div class="resumen-cita" id="resumenOk"></div>
               <div class="acciones-hoja" style="justify-content:center">
-                <a class="btn btn--azul" id="btnWhatsappCita" href="#" target="_blank" rel="noopener">Confirmar por WhatsApp</a>
+                <a class="btn btn--rojo" id="btnWhatsappCita" href="#" target="_blank" rel="noopener">Confirmar por WhatsApp</a>
                 <button class="btn btn--linea" id="btnOtroTurno">Agendar otra moto</button>
               </div>
             </div>
@@ -281,7 +281,7 @@
       </div>
 
       <aside class="lateral">
-        <div class="ficha ficha--azul">
+        <div class="ficha ficha--rojo">
           <h4>Horario de atención</h4>
           <ul id="fichaHorario"></ul>
         </div>
@@ -351,7 +351,9 @@
     </div>
 
     <div style="margin-top:56px">
-      <h4 style="color:var(--acero);margin-bottom:14px">Marcas que atendemos</h4>
+      <h4 style="color:var(--rojo-claro);margin-bottom:14px">Marcas autorizadas</h4>
+      <div class="marcas marcas--destacadas" id="marcasAutorizadas"></div>
+      <h4 style="color:var(--acero);margin:28px 0 14px">También atendemos</h4>
       <div class="marcas" id="marcas"></div>
     </div>
   </div>
@@ -373,7 +375,7 @@
   <div class="envoltura">
     <div class="encabezado-seccion">
       <span class="eyebrow">Dónde estamos</span>
-      <h2>Vextor Motor Garage</h2>
+      <h2>Vexttor</h2>
     </div>
     <div class="contacto">
       <div class="contacto__bloque">
@@ -405,7 +407,7 @@
 
 <footer class="pie">
   <div class="envoltura pie__fila">
-    <span>© <span id="anio">2026</span> Vextor Motor Garage · Girardota, Antioquia</span>
+    <span>© <span id="anio">2026</span> Vexttor · Calidad y confianza sobre ruedas · Girardota, Antioquia</span>
     <button id="abrirPanel">Panel del taller</button>
   </div>
 </footer>
@@ -429,7 +431,7 @@
     </div>
     <div class="modal__pie">
       <button class="btn btn--fantasma btn--peq" id="vaciarCot">Vaciar lista</button>
-      <a class="btn btn--azul" id="enviarCot" href="#" target="_blank" rel="noopener">Enviar por WhatsApp</a>
+      <a class="btn btn--rojo" id="enviarCot" href="#" target="_blank" rel="noopener">Enviar por WhatsApp</a>
     </div>
   </div>
 </div>

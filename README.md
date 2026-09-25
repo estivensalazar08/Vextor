@@ -1,6 +1,6 @@
-# Vextor Motor Garage — landing page
+# Vexttor — landing page
 
-Sitio de una sola página para el taller de motocicletas **Vextor**, en Girardota (Antioquia).
+Sitio de una sola página para el taller de motocicletas **Vexttor**, en Girardota (Antioquia).
 Sin frameworks ni dependencias: es HTML, CSS y JavaScript puro. Se abre con doble clic.
 
 ```
@@ -81,7 +81,7 @@ vean, pónganlo en `false`.
 La forma más rápida, sin costo y sin configurar nada:
 
 1. Entre a [app.netlify.com/drop](https://app.netlify.com/drop).
-2. Arrastre **toda la carpeta** `Landing Page Vextor`.
+2. Arrastre **toda la carpeta** `Landing Page Vexttor`.
 3. Netlify le da una dirección al instante. Después se le conecta el dominio propio
    (por ejemplo `vextor.com.co`) desde *Domain settings*.
 
@@ -92,8 +92,12 @@ Cualquier hosting sirve: solo hay que subir los cuatro archivos respetando las c
 
 ## 5. Detalles de la marca
 
-Tomados del logo: negro `#0A0C0E`, azul eléctrico `#1287E8` y degradado cromo para el
-monograma V+E y el titular. Tipografías: **Montserrat** (la del wordmark), **Barlow**
-para textos y **JetBrains Mono** para placas, códigos y precios.
-El monograma está dibujado en SVG dentro de `index.html`, así que se ve nítido en
-cualquier tamaño y no depende de un archivo de imagen.
+Tomados del letrero del local: negro `#0B0B0C`, rojo `#E11D22` y degradado cromo.
+Tipografías: **Saira** (la más parecida al wordmark del letrero), **Barlow** para
+textos y **JetBrains Mono** para placas, códigos y precios.
+
+El monograma —la V angular roja con filo cromado— está dibujado en SVG dentro de
+`index.html`, así que se ve nítido en cualquier tamaño y no depende de una imagen.
+**Es una aproximación hecha a partir de la foto de la fachada.** Si consiguen el
+archivo original del logo (SVG, AI o PNG con fondo transparente) con quien hizo el
+aviso, se reemplaza y queda exacto.

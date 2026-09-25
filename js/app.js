@@ -1,5 +1,5 @@
 /* ============================================================
-   VEXTOR MOTOR GARAGE — Lógica de la página
+   VEXTTOR — Lógica de la página
    ------------------------------------------------------------
    Funciona en dos modos, sin cambiar nada:
    · Publicada como Artifact  → las citas se guardan de verdad
@@ -92,8 +92,8 @@ const app = {
   filtroPanel: "todos",
 };
 
-const LS_COT = "vextor_cotizacion";
-const LS_CITAS = "vextor_citas_local";
+const LS_COT = "vexttor_cotizacion";
+const LS_CITAS = "vexttor_citas_local";
 
 function leerLocal(clave, porDefecto) {
   try { const v = localStorage.getItem(clave); return v ? JSON.parse(v) : porDefecto; }
@@ -117,7 +117,7 @@ function pintarServicios() {
       <ul class="servicio__incluye">${s.incluye.map((i) => `<li>${escapar(i)}</li>`).join("")}</ul>
       <div class="servicio__pie">
         <span class="servicio__desde">${s.desde ? "Desde" : "Precio"}<b>${s.desde ? pesos(s.desde) : "Según peritaje"}</b></span>
-        <button class="enlace-azul" data-agendar-servicio="${s.id}">
+        <button class="enlace-rojo" data-agendar-servicio="${s.id}">
           Agendar
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </button>
@@ -126,7 +126,9 @@ function pintarServicios() {
 }
 
 function pintarMarcas() {
-  $("#marcas").innerHTML = MARCAS.map((m) => `<span>${escapar(m)}</span>`).join("");
+  const chip = (m) => `<span>${escapar(m)}</span>`;
+  $("#marcasAutorizadas").innerHTML = MARCAS_AUTORIZADAS.map(chip).join("");
+  $("#marcas").innerHTML = MARCAS.map(chip).join("");
 }
 
 function pintarFaq() {
@@ -142,14 +144,14 @@ function pintarContacto() {
   $("#ctoMapa").href = CONFIG.mapa;
   const tel = $("#ctoTel");
   tel.textContent = CONFIG.telefonoVisible;
-  tel.href = waLink("Hola Vextor, quiero información sobre el taller.");
+  tel.href = waLink("Hola Vexttor, quiero información sobre el taller.");
   tel.target = "_blank"; tel.rel = "noopener";
   $("#ctoIg").textContent = "@" + CONFIG.instagram;
   $("#ctoIg").href = "https://instagram.com/" + CONFIG.instagram;
   $("#ctoCorreo").textContent = CONFIG.correo;
   $("#ctoCorreo").href = "mailto:" + CONFIG.correo;
   $("#anio").textContent = new Date().getFullYear();
-  $("#btnWhatsappGeneral").href = waLink("Hola Vextor, quiero agendar un turno para mi moto.");
+  $("#btnWhatsappGeneral").href = waLink("Hola Vexttor, quiero agendar un turno para mi moto.");
   $("#fichaHorario").innerHTML = [1, 2, 3, 4, 5, 6, 0]
     .map((d) => `<li><span>${DIAS_LARGO[d].charAt(0).toUpperCase() + DIAS_LARGO[d].slice(1)}</span><b>${horarioTexto(d)}</b></li>`)
     .join("");
@@ -241,8 +243,8 @@ function pintarCotizacion() {
   const total = items.reduce((s, p) => s + p.precio, 0);
   $("#totalCot").textContent = pesos(total);
   const texto = items.length
-    ? `Hola Vextor, quiero cotizar estos productos:\n\n${items.map((p) => `• ${p.nombre} (${p.marca}) — ${pesos(p.precio)}`).join("\n")}\n\nTotal estimado: ${pesos(total)}`
-    : "Hola Vextor, quiero cotizar unos repuestos.";
+    ? `Hola Vexttor, quiero cotizar estos productos:\n\n${items.map((p) => `• ${p.nombre} (${p.marca}) — ${pesos(p.precio)}`).join("\n")}\n\nTotal estimado: ${pesos(total)}`
+    : "Hola Vexttor, quiero cotizar unos repuestos.";
   $("#enviarCot").href = waLink(texto);
 }
 
@@ -310,7 +312,7 @@ function pintarOpcionesServicio() {
   const sel = $("#marca");
   if (sel.options.length <= 1) {
     sel.innerHTML = '<option value="">Selecciona…</option>' +
-      MARCAS.map((m) => `<option>${escapar(m)}</option>`).join("") + '<option>Otra</option>';
+      MARCAS_AUTORIZADAS.concat(MARCAS).map((m) => `<option>${escapar(m)}</option>`).join("") + '<option>Otra</option>';
   }
 }
 
@@ -463,7 +465,7 @@ async function confirmarTurno() {
   btn.disabled = false;
   btn.textContent = "Confirmar turno";
 
-  const texto = `Hola Vextor, agendé un turno.\n\nCódigo: ${cita.codigo}\nServicio: ${cita.servicio}\nMoto: ${cita.marca} ${cita.modelo} (${cita.placa})\nDía: ${fechaLarga(cita.fecha)}\nHora: ${hora12(cita.hora)}\nNombre: ${cita.nombre}`;
+  const texto = `Hola Vexttor, agendé un turno.\n\nCódigo: ${cita.codigo}\nServicio: ${cita.servicio}\nMoto: ${cita.marca} ${cita.modelo} (${cita.placa})\nDía: ${fechaLarga(cita.fecha)}\nHora: ${hora12(cita.hora)}\nNombre: ${cita.nombre}`;
   $("#btnWhatsappCita").href = waLink(texto);
   $("#okTitulo").textContent = app.db ? "Turno apartado" : "Turno solicitado";
   $("#okTexto").textContent = app.db
@@ -550,7 +552,7 @@ function csvCitas() {
 
 async function descargarCsv() {
   const contenido = csvCitas();
-  const nombre = `vextor-agenda-${aISO(new Date())}.csv`;
+  const nombre = `vexttor-agenda-${aISO(new Date())}.csv`;
   try {
     const descargas = await claudeUse("downloads");
     if (descargas) { await descargas.save({ filename: nombre, data: contenido }); return; }

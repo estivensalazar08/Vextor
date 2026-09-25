@@ -1,5 +1,5 @@
 /* ============================================================
-   VEXTOR — Datos del negocio
+   VEXTTOR — Datos del negocio
    ------------------------------------------------------------
    ESTE ES EL ÚNICO ARCHIVO QUE NECESITAN EDITAR PARA:
    cambiar teléfono, dirección, horarios, precios y productos.
@@ -7,14 +7,14 @@
    ============================================================ */
 
 const CONFIG = {
-  nombre: "Vextor",
-  eslogan: "Motor Garage",
+  nombre: "Vexttor",
+  eslogan: "Calidad y confianza sobre ruedas",
   ciudad: "Girardota, Antioquia",
   direccion: "Cra. 15 # 10-25, Girardota, Antioquia",   // ⚠️ CAMBIAR
   whatsapp: "573148216601",                              // formato: 57 + número, sin espacios ni +
   telefonoVisible: "+57 314 821 6601",
-  correo: "hola@vextor.com.co",                          // ⚠️ CAMBIAR
-  instagram: "vextor.taller",                            // ⚠️ CAMBIAR
+  correo: "hola@vexttor.com",                          // ⚠️ CAMBIAR
+  instagram: "vexttor.taller",                            // ⚠️ CAMBIAR
   mapa: "https://maps.google.com/?q=Girardota,+Antioquia", // ⚠️ CAMBIAR por el enlace exacto del local
   panelTaller: false, // true muestra el enlace "Panel del taller" del pie
   bahias: 2,          // cuántas motos pueden atender al mismo tiempo
@@ -154,7 +154,11 @@ const CATALOGO = [
     detalle: "Desengrasante, lubricante en spray y cepillo de tres caras." },
 ];
 
-const MARCAS = ["Bajaj", "AKT", "Yamaha", "Honda", "Suzuki", "TVS", "Hero", "Victory", "KTM", "Kawasaki", "Royal Enfield", "Benelli"];
+/* Las cuatro de la fachada: distribución autorizada. */
+const MARCAS_AUTORIZADAS = ["AKT", "Bajaj", "TVS", "Auteco"];
+
+/* Las demás se atienden en taller, sin ser distribuidor. */
+const MARCAS = ["Yamaha", "Honda", "Suzuki", "Hero", "Victory", "KTM", "Kawasaki", "Royal Enfield", "Benelli"];
 
 const PREGUNTAS = [
   { p: "¿Tengo que agendar o puedo llegar directo?",
